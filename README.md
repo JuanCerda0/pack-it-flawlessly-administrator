@@ -26,3 +26,7 @@ Las creaciones devuelven `201`; las eliminaciones, `204`. Entradas inválidas de
 ## Pruebas
 
 `./mvnw test` ejecuta las pruebas de API, validación y autorización sin requerir RabbitMQ. Con un broker local activo, `./mvnw -Dadmin.rabbit.integration=true -Dtest=RabbitAdminBrokerTests test` verifica creación, enrutamiento y eliminación de recursos `demo.*`. La prueba usa nombres aleatorios y limpia sus recursos.
+
+## Docker local
+
+El [Compose del repositorio Paquetes](../pack-it-flawlessly-backend/compose.yaml) construye este servicio junto con los demás. Comparte el clúster RabbitMQ y no recibe una base PostgreSQL. Consulta el README de Paquetes para preparar `.env.compose` y levantar el stack.
